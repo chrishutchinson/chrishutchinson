@@ -1,0 +1,96 @@
+/**
+* Default content styling, used for articles and the visual editor
+*/
+
+// Blockquote
+blockquote{
+	padding: 10px 20px 10px 20px; border-left: 4px solid $secondary-color; @include default-margin;
+	p:last-child{ margin: 0; }
+}
+
+// Cite
+cite{ font-style: italic; }
+
+// Tables
+table{
+	width: 100%; display: table; @include default-margin;
+ 	thead, thead th{
+		font-weight: $font-weight-bold; background-color: $secondary-color; color: #FFF;
+		border-bottom: 2px solid darken($secondary-color, 10%);
+	}
+	tr{
+		border-bottom: 1px solid #eaeaea;
+	}
+	td, th{
+		padding: 10px;
+	}
+}
+
+// Definition Lists
+dl{
+	line-height: $line-height;
+	dt{ font-weight: $font-weight-bold; }
+	dd{ font-style: italic; margin: 0 0 0 10px; @include default-margin; }
+}
+
+// Lists
+ul, ol{
+	margin: 0 0 0 40px; line-height: $line-height; @include default-margin;
+	ul, ol{ margin: 0 0 0 40px; }
+}
+
+// Address
+address{
+	line-height: $line-height; @include default-margin;
+}
+
+// Acronym
+acronym{
+	border-bottom: 1px dotted;
+}
+
+// Code, Keyboard & Teletype
+code, kbd, tt{
+	font-family: monospace; padding: 3px 5px; background-color: #eaeaea; border: 1px solid #bababa; border-radius: 4px; font-size: 0.8em;
+}
+
+// Pre
+pre{
+	padding: 10px 20px 10px 20px; border-left: 4px solid $secondary-color; @include default-margin;
+	word-wrap: break-word;
+}
+
+// Quote
+q{
+	padding: 10px 20px 10px 20px; border-left: 4px solid $secondary-color; @include default-margin;
+}
+
+// Subscript
+sub{
+	font-size: 0.7em; vertical-align: sub;
+}
+
+// Superscript
+sup{
+	font-size: 0.7em; vertical-align: super;
+}
+
+.aligncenter{
+	text-align: center; display: block; margin: 0 auto; @include default-margin;
+}
+
+.alignleft{
+	float: left; margin: 0 10px 10px 0;
+}
+
+.alignright{
+	float: right; margin: 0 0 10px 10px;
+}
+
+div.wp-caption{
+	max-width: 100%;
+}
+
+p.wp-caption-text{
+	font-size: 0.8em; 
+}

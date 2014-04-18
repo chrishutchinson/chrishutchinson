@@ -1,0 +1,36 @@
+// Colours
+$background-color: 		#FFF;
+$text-color: 			#565656;
+$secondary-color:		#b44c41;
+
+// Anchors
+$anchor-color: 			$secondary-color;
+
+// Fonts
+$font-family: 			'Open Sans', sans-serif;
+$font-weight: 			400;
+$font-weight-bold: 		700;
+$secondary-font-family: 'Lora', serif;
+$secondary-fony-weight: 400;
+$line-height: 			1.6em;
+
+// Spacing
+$default-margin: 		20px;
+
+// Navigation
+$navigation-background: 				$background-color;
+$navigation-link-color: 				$text-color;
+$navigation-link-color-hover: 			#FFF;
+$navigation-link-background:			$navigation-background;
+$navigation-link-background-hover:		$secondary-color;
+
+
+// Footer
+$footer-background-color: 		#EEEEEE;
+$footer-border-color: 			#DEDEDE;
+
+
+// Mixins
+@mixin default-margin {
+	margin-bottom: $default-margin;
+}
