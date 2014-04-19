@@ -10,6 +10,7 @@
 		$repoType = get_field('repo_type');
 		?>
 		<div class="featured-image" style="background-image: url('<?php echo $image[0]; ?>')">
+			<div class="overlay"></div>
 			<h1><?php the_title(); ?></h1>
 			<p><?php echo get_field('short_description'); ?></p>
 			<?php
