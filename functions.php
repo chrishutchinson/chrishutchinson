@@ -64,7 +64,7 @@ class chrisHutchinsonTheme {
 		if(WP_DEBUG == true){ // If debug is enabled in wp-config, load the unminified version
 			wp_enqueue_script($this->theme->name.'-ui', get_template_directory_uri().'/js/ui.js', array('jquery'), $this->theme->version, true);
 		} else { // Otherwise load up the minified JS
-			wp_enqueue_script($this->theme->name.'-ui', get_template_directory_uri().'/js/ui.min.js', array('jquery'), $this->theme->version, true);
+			wp_enqueue_script($this->theme->name.'-ui', get_template_directory_uri().'/js/min/ui-ck.js', array('jquery'), $this->theme->version, true);
 		}
 
 		// CSS
