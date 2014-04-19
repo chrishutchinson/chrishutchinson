@@ -143,11 +143,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 6px 0; }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1.5em; }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 1.5em; }
 
 h3 {
@@ -200,7 +200,7 @@ header#header {
     transition: all .4s ease; }
     header#header nav#navigation ul.menu {
       letter-spacing: -4px;
-      float: left; }
+      float: right; }
       header#header nav#navigation ul.menu li {
         display: inline-block;
         letter-spacing: normal; }
@@ -215,8 +215,21 @@ header#header {
             background-color: #b44c41; }
         header#header nav#navigation ul.menu li.logo a {
           font-family: "Lora", serif; }
-      header#header nav#navigation ul.menu:last-of-type {
-        float: right; }
+      header#header nav#navigation ul.menu:first-of-type {
+        float: left; }
+    header#header nav#navigation div#mobile-menu {
+      float: right;
+      display: none;
+      text-transform: uppercase;
+      font-size: 0.8em; }
+      header#header nav#navigation div#mobile-menu a {
+        color: #FFF;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px; }
+        header#header nav#navigation div#mobile-menu a i {
+          margin: 0 0 0 4px; }
     header#header nav#navigation.bg {
       background-color: rgba(255, 255, 255, 0.9);
       box-shadow: 0px 0px 2px #888; }
@@ -225,6 +238,8 @@ header#header {
         header#header nav#navigation.bg ul.menu li a:hover {
           color: white;
           background-color: #b44c41; }
+      header#header nav#navigation.bg div#mobile-menu a {
+        color: #565656; }
 
 body.admin-bar header#header nav#navigation {
   top: 32px; }
@@ -444,3 +459,72 @@ footer#footer {
       float: right;
       width: 60%;
       text-align: right; }
+
+@media screen and (max-width: 849px) {
+  div.container {
+    width: 100%;
+    padding: 20px; }
+
+  header#hero {
+    padding: 60px 0 50px; }
+    header#hero h1 {
+      font-size: 3em; } }
+@media screen and (max-width: 782px) {
+  body.admin-bar header#header nav#navigation {
+    top: 0; }
+
+  div#main section.single article div.featured-image {
+    height: auto; }
+    div#main section.single article div.featured-image h1 {
+      font-size: 4em;
+      padding: 80px 10px 20px; }
+    div#main section.single article div.featured-image a.button {
+      margin: 0 0 80px; } }
+@media screen and (max-width: 549px) {
+  body {
+    font-size: 14px; }
+
+  header#header nav#navigation ul.menu.links, header#header nav#navigation.bg ul.menu.links {
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    width: 230px;
+    position: fixed;
+    top: 0;
+    right: -230px;
+    height: 100%;
+    background-color: #3a3a3a; }
+    header#header nav#navigation ul.menu.links li, header#header nav#navigation.bg ul.menu.links li {
+      display: block;
+      width: 230px;
+      background-color: #3a3a3a;
+      border-bottom: 1px solid #2b2b2b; }
+      header#header nav#navigation ul.menu.links li a, header#header nav#navigation.bg ul.menu.links li a {
+        padding: 0 20px;
+        color: #FFF; }
+  header#header nav#navigation ul.menu li a, header#header nav#navigation.bg ul.menu li a {
+    padding: 0 10px; }
+  header#header nav#navigation div#mobile-menu, header#header nav#navigation.bg div#mobile-menu {
+    display: block; }
+
+  body.menu-open header#header nav#navigation {
+    left: -230px; }
+    body.menu-open header#header nav#navigation ul.menu.links {
+      right: 0px; }
+    body.menu-open header#header nav#navigation div#mobile-menu a i.fa.fa-bars:before {
+      content: "\f00d"; }
+
+  div#main section.single article div.featured-image h1 {
+    font-size: 3em; }
+  div#main section.archive.portfolio article {
+    width: 100%;
+    margin: 0 0 40px 0; }
+
+  footer#footer ul.sidebar, footer#footer ul.sidebar.column-2 {
+    width: 100%;
+    margin: 0;
+    text-align: left; }
+    footer#footer ul.sidebar ul li a, footer#footer ul.sidebar.column-2 ul li a {
+      font-size: 1em !important; } }

@@ -23,8 +23,15 @@
 			wp_nav_menu(array(
 				'menu' => 'header',
 				'container' => false,
+				'menu_class' => 'menu links',
 			));
 			?>
+
+			<div id="mobile-menu">
+				<a href="#" data-action="toggleMenu">
+					Menu <i class="fa fa-bars"></i>
+				</a>
+			</div>
 		</nav>
 	</header>
 
@@ -33,7 +40,14 @@
 		?>
 		<header id="hero">
 			<h1><?php echo get_bloginfo('name'); ?></h1>
-			<p><?php echo get_bloginfo('description'); ?></p>
+			<?php
+			$siteDescription = get_bloginfo('description');
+			if(!empty($siteDescription)){
+				?>
+				<p><?php echo get_bloginfo('description'); ?></p>
+				<?php
+			}
+			?>
 		</header>
 		<?php
 	}

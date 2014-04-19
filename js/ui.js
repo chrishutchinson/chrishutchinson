@@ -1,7 +1,26 @@
 jQuery(document).ready(function($){
 	var actions = {
-		
+		toggleMenu: function(e){
+			e.preventDefault();
+			$('body').toggleClass('menu-open');
+		},
+
+		closeMenu: function(){
+			$('body').removeClass('menu-open');
+		}
 	};
+
+	$('html').on('touchstart', 'body.menu-open', function(e){
+		if(!$(e.target).is('a')){
+			actions.closeMenu.apply();
+		}
+	});
+
+	$('html').on('click', 'body.menu-open', function(e){
+		if(!$(e.target).is('a')){
+			actions.closeMenu.apply();
+		}
+	});
 
 	$('body').on('click', '[data-action]', function(){
 		var action = $(this).data('action');
@@ -9,11 +28,6 @@ jQuery(document).ready(function($){
 			actions[action].apply(this, arguments);
 		}
 	});
-
-	$(window).scroll(function(){
-		processHeader();
-	});
-	processHeader();
 
 	function processHeader(){
 		if($(window).scrollTop() > 0){
@@ -25,5 +39,10 @@ jQuery(document).ready(function($){
 			}
 		}
 	}
+
+	$(window).scroll(function(){
+		processHeader();
+	});
+	processHeader();
 
 });
