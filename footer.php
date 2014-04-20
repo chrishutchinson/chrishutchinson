@@ -1,7 +1,7 @@
 	</div> <!-- / div#main -->
 
 <footer id="footer">
-	<div class="face"><img src="http://www.chrishutchinson.me/wp-content/themes/bones/library/images/chris.png" width="100" height="100"></div>
+	<div class="face"><img src="<?php echo get_template_directory_uri(); ?>/images/chris.png" width="100" height="100"></div>
 	
 	<div class="container">
 
