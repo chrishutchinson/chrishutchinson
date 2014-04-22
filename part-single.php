@@ -6,6 +6,7 @@
 		$image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'single-post-thumbnail' );
 		?>
 		<div class="featured-image" style="background-image: url('<?php echo $image[0]; ?>')">
+			<div class="overlay"></div>
 			<h1><?php the_title(); ?></h1>
 		</div>
 		<?php
@@ -18,6 +19,9 @@
 		if(!$featured && !is_front_page()){
 			?><h1><?php the_title(); ?></h1><?php
 		}
+		?>
+		<span class="date"><i class="fa fa-calendar"></i> <?php the_date(); ?></span>
+		<?php
 		the_content();
 		
 		wp_link_pages();

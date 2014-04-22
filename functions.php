@@ -1,7 +1,7 @@
 <?php
 /**
  * Theme: Chris Hutchinson
- * URL: http://github.com/chrishutchinson/chris-hutchinson
+ * URL: http://github.com/chrishutchinson/chrishutchinson
  * Class: chrisHutchinsonTheme
  */
 class chrisHutchinsonTheme {
@@ -36,6 +36,9 @@ class chrisHutchinsonTheme {
 		// Image Sizes
 		// add_image_size();
 
+		// oEmbed Providers
+		wp_oembed_add_provider('http://codepen.io/*/pen/*', 'http://codepen.io/api/oembed'); // Codepen
+
 		// Menus
 		register_nav_menus(array(
 			'header' => 'Main Navigation',
@@ -50,7 +53,6 @@ class chrisHutchinsonTheme {
 
 		// Filters
 		add_filter('excerpt_more', array(&$this, 'excerptMore'));
-
 	}
 
 	function excerptMore(){

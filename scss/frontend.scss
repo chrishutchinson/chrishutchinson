@@ -122,7 +122,7 @@ body.admin-bar{
 header#hero{
 	margin: 0 0 20px 0; color: #FFF; 
 	background-image: url(../images/background.png); background-repeat: repeat; background-position: center; text-align: center; padding: 140px 0;
-	h1{ font-family: $secondary-font-family; font-size: 5em; }
+	h1{ position: relative; z-index: 11; color: #FFF; font-family: $secondary-font-family; padding: 20px 10px; font-size: 5em; }
 	p{ font-size: 2em; }
 	&.small{
 		display: none;
@@ -146,6 +146,12 @@ div#main{
 				&:after{
 					z-index: 15; content: "\f078"; font-size: 30px; font-family:FontAwesome; font-style:normal; font-weight:normal; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; position: absolute; bottom: 20px; right: 50px; color: #FFF;
 				}
+			}
+
+			h1{ font-size: 3em; }
+
+			span.date{
+				margin: 0 0 20px 0; padding: 0 0 20px 0; font-size: 0.9em; display: block; text-align: left; border-bottom: 1px solid #eaeaea;
 			}
 
 			div.panel{
@@ -176,6 +182,8 @@ div#main{
 					&:hover{ color: $anchor-color; }
 				}
 			}
+
+			span.date{ font-size: 0.9em; margin: 0 0 15px 0; display: block; }
 		}
 
 		&.portfolio{
@@ -260,7 +268,7 @@ footer#footer{
 				div.featured-image{
 					height: auto;
 					h1{
-						font-size: 4em; padding: 80px 10px 20px;
+						font-size: 4em; padding: 80px 10px 40px;
 					}
 					a.button{ margin: 0 0 80px; }
 				}
@@ -323,6 +331,10 @@ footer#footer{
 					h1{
 						font-size: 3em;
 					}
+				}
+
+				.alignright, .alignleft, .aligncenter{
+					display: block; clear: both; float: none; margin: 0 auto 20px;
 				}
 			}
 		}

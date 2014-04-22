@@ -253,7 +253,11 @@ header#hero {
   text-align: center;
   padding: 140px 0; }
   header#hero h1 {
+    position: relative;
+    z-index: 11;
+    color: #FFF;
     font-family: "Lora", serif;
+    padding: 20px 10px;
     font-size: 5em; }
   header#hero p {
     font-size: 2em; }
@@ -314,6 +318,15 @@ div#main {
         bottom: 20px;
         right: 50px;
         color: #FFF; }
+    div#main section.single article h1 {
+      font-size: 3em; }
+    div#main section.single article span.date {
+      margin: 0 0 20px 0;
+      padding: 0 0 20px 0;
+      font-size: 0.9em;
+      display: block;
+      text-align: left;
+      border-bottom: 1px solid #eaeaea; }
     div#main section.single article div.panel {
       background-color: #eaeaea;
       padding: 15px 25px;
@@ -418,6 +431,10 @@ div#main {
     color: #565656; }
     div#main section.archive article h1 a:hover, div#main section.archive article span a:hover {
       color: #b44c41; }
+  div#main section.archive article span.date {
+    font-size: 0.9em;
+    margin: 0 0 15px 0;
+    display: block; }
   div#main section.archive.portfolio {
     margin: 40px 0 0 0;
     overflow: hidden; }
@@ -499,7 +516,7 @@ footer#footer {
     height: auto; }
     div#main section.single article div.featured-image h1 {
       font-size: 4em;
-      padding: 80px 10px 20px; }
+      padding: 80px 10px 40px; }
     div#main section.single article div.featured-image a.button {
       margin: 0 0 80px; } }
 @media screen and (max-width: 549px) {
@@ -540,6 +557,11 @@ footer#footer {
 
   div#main section.single article div.featured-image h1 {
     font-size: 3em; }
+  div#main section.single article .alignright, div#main section.single article .alignleft, div#main section.single article .aligncenter {
+    display: block;
+    clear: both;
+    float: none;
+    margin: 0 auto 20px; }
   div#main section.archive.portfolio article {
     width: 100%;
     margin: 0 0 40px 0; }
