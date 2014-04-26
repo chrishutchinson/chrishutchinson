@@ -19,8 +19,11 @@
 		if(!$featured && !is_front_page()){
 			?><h1><?php the_title(); ?></h1><?php
 		}
+
+		if(!is_front_page()){
+			?><span class="date"><i class="fa fa-calendar"></i> <?php the_date(); ?></span><?php
+		}
 		?>
-		<span class="date"><i class="fa fa-calendar"></i> <?php the_date(); ?></span>
 		<?php
 		the_content();
 		
