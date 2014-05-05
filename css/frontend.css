@@ -332,6 +332,30 @@ div#main {
       padding: 15px 25px;
       margin-bottom: 20px;
       border-radius: 5px; }
+    div#main section.single article ul.columns {
+      letter-spacing: -4px;
+      margin: 0;
+      padding: 0; }
+      div#main section.single article ul.columns li.column {
+        letter-spacing: normal;
+        display: inline-block;
+        margin: 0 2% 0 0;
+        margin-bottom: 20px;
+        width: 32%;
+        vertical-align: top; }
+        div#main section.single article ul.columns li.column.last {
+          margin: 0;
+          margin-bottom: 20px; }
+        div#main section.single article ul.columns li.column p, div#main section.single article ul.columns li.column iframe {
+          max-width: 100%; }
+    @media screen and (max-width: 782px) {
+      div#main section.single article ul.columns li.column, div#main section.single article ul.columns li.column.last {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%; }
+        div#main section.single article ul.columns li.column iframe, div#main section.single article ul.columns li.column.last iframe {
+          max-width: auto;
+          width: 100%; } }
     div#main section.single article blockquote {
       padding: 10px 20px 10px 20px;
       border-left: 4px solid #b44c41;

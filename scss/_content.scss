@@ -2,6 +2,28 @@
 * Default content styling, used for articles and the visual editor
 */
 
+// Columns
+ul.columns{
+	letter-spacing: -4px; margin: 0; padding: 0;
+	li.column{
+		letter-spacing: normal; display: inline-block;
+		margin: 0 2% 0 0; @include default-margin;
+		width: 32%; vertical-align: top;
+		&.last{ margin: 0; @include default-margin; }
+		p, iframe{ max-width: 100%; }
+	}
+}
+
+@media screen and (max-width: 782px){
+	ul.columns{
+		li.column, li.column.last{
+			margin: 0; @include default-margin;
+			width: 100%;
+			iframe{ max-width: auto; width: 100%; }
+		}
+	}
+}
+
 // Blockquote
 blockquote{
 	padding: 10px 20px 10px 20px; border-left: 4px solid $secondary-color; @include default-margin;
