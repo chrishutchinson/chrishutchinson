@@ -272,6 +272,7 @@ div#main {
     * Default content styling, used for articles and the visual editor
     */ }
     div#main section.single article div.featured-image {
+      background-attachment: fixed;
       height: 500px;
       text-align: center;
       background-color: #eaeaea;
