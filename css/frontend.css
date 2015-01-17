@@ -320,7 +320,9 @@ div#main {
         right: 50px;
         color: #FFF; }
     div#main section.single article h1 {
-      font-size: 3em; }
+      font-size: 3em;
+      line-height: 1.2em;
+      margin: 0 0 12px; }
     div#main section.single article span.date {
       margin: 0 0 20px 0;
       padding: 0 0 20px 0;
